@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="dashboard">
+    <!-- Header -->
+    <header>
+        <h1>Customer Satisfaction Dashboard</h1>
+        <p>Analyzing survey responses for actionable insights</p>
+    </header>
+
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+        <div class="card">
+            <h3>Total Responses</h3>
+            <p id="total-responses">0</p>
+        </div>
+        <div class="card">
+            <h3>Avg. Satisfaction</h3>
+            <p id="avg-satisfaction">0%</p>
+        </div>
+        <div class="card">
+            <h3>Top Attribute</h3>
+            <p id="top-attribute">-</p>
+        </div>
+    </div>
+
+    <!-- Attribute Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" data-attribute="FoodQuality">Food Quality</button>
+        <button class="tab-btn" data-attribute="Hygiene">Hygiene</button>
+        <button class="tab-btn" data-attribute="Service">Service</button>
+        <button class="tab-btn" data-attribute="Ambience">Ambience</button>
+    </div>
+
+    <!-- Charts Container -->
+    <div class="charts">
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Response Table (Optional) -->
+    <div class="response-table">
+        <h2>Detailed Responses</h2>
+        <table id="response-data">
+            <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
